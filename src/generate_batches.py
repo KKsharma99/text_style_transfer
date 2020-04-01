@@ -17,7 +17,7 @@ def yieldBatchesFromFiles(files, batchsize):
     """
     openedFiles = []
     for fname in files:
-        openedFiles.append(open(fname, 'r'))
+        openedFiles.append(open(fname, 'r', errors='ignore'))
 
     while True:
         inputs = []
@@ -36,7 +36,7 @@ def loadFilesAndGenerateBatches(
     inputs = []
     lenLines = []
     for label, fileName in enumerate([style1, style2]):
-        with open(fileName, 'r') as fp:
+        with open(fileName, 'r', errors='ignore') as fp:
             lines = fp.readlines()
 
         lines = list(map(lambda x: x[:-1], lines))
