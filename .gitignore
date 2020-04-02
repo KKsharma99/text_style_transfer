@@ -101,8 +101,8 @@ ENV/
 # mypy
 .mypy_cache/
 
-data/models/*
-data/yelp/model*
+#data/models/*
+#data/yelp/model*
 classifier/snapshot_yelp/*
 classifier/snapshot/best_on_MR/*
 data/yelp/classifier_train_dev/*
