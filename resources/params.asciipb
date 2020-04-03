@@ -1,6 +1,6 @@
 in_memory: True
 max_len: 20
-embedding_size: 100
+embedding_size: 64
 dim_y: 200
 dim_z: 500
 batch_size: 64
