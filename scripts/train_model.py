@@ -64,3 +64,4 @@ if __name__ == "__main__":
         inMemory=True)
 
     model.trainModel(trainBatches, validSet)
+    torch.save(model, 'model.pt')
