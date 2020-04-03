@@ -1,0 +1,18 @@
+SPEECH 1: President Trump’s Address to a Joint Session of Congress - Feb. 28, 2017
+SPEECH 2: Remarks by President Trump on Iran - Jan. 8, 2020
+SPEECH 3: State of the Union Address - Feb. 5, 2019
+SPEECH 4: Remarks by President Trump at the World Economic Forum - Jan. 26, 2018
+SPEECH 5: Remarks by the President in Nashville, Tennessee - March 15, 2017
+SPEECH 6: President Donald J. Trump Inaugural Address - Jan. 20, 2017
+SPEECH 7: Donald Trump Speech in Miami - Sept. 16, 2016
+SPEECH 8: Trump Letter to Pelosi on Impeachment - Dec. 17, 2019
+SPEECH 9: President Trump’s National Emergency Remarks - Feb. 15, 2019
+SPEECH 10: President Trump’s U.N. Press Conference - Sept. 26, 2018
+SPEECH 11: Remarks by President Trump at Tax Reform Event - Sept. 5, 2017
+SPEECH 12: Remarks by President Trump on Infrastructure, Charlottesville - Aug. 15, 2017
+SPEECH 13: President Trump on the Paris Climate Accord - June 1, 2017
+SPEECH 14: Remarks by the President at the NRCC Dinner - Mar. 21, 2017
+SPEECH 15: President Trump Press Conference - Feb. 16, 2017
+SPEECH 16: President Trump Remarks on African American History Month - Feb. 2, 2017
+SPEECH 17: President Trump Statement on Immigration - Jan. 29, 2017
+SPEECH 18: Remarks by President Trump and Vice President Pence at CIA Headquarters - Jan. 21, 2017
