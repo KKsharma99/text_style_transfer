@@ -29,3 +29,5 @@ if __name__ == "__main__":
     vocabulary = list(map(lambda x: x[0], wordsAndCounts))
     with open(args.vocabulary_output, 'wb') as fp:
         pickle.dump(vocabulary, fp)
+    
+    print("Vocabulary Updated!")
