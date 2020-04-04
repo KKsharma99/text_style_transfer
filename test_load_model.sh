@@ -5,6 +5,6 @@ python -m load_model \
   --train_file_style2 data/yelp/train/negative.txt \
   --evaluation_file_style1 data/yelp/dev/positive.txt \
   --evaluation_file_style2 data/yelp/dev/negative.txt \
-  --vocabulary data/yelp/vocabulary_10_pct.pickle \
+  --vocabulary data/yelp/vocabulary.pickle \
   --savefile data/models/yelp/model \
   --logdir data/models/yelp/log/
