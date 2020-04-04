@@ -64,4 +64,6 @@ if __name__ == "__main__":
         inMemory=True)
 
     model.trainModel(trainBatches, validSet)
-    torch.save(model, 'model.pt')
+    print("SAVING MODEL")
+    torch.save(model.state_dict(), 'model.pt')
+    print("MODEL SAVED")
