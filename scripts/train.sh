@@ -1,7 +1,4 @@
 #!/bin/bash
-# python -m scripts.get_vocabulary \
-#   --files data/yelp/full_text.txt \
-#   --vocabulary_output data/yelp/vocabulary.pickle \
 
 python -m scripts.train_model \
   --train_file_style1 data/yelp/train/positive.txt \
