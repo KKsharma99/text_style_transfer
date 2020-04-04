@@ -5,9 +5,9 @@ import datetime
 import torch
 import torchtext.data as data
 import torchtext.datasets as datasets
-import model
-import train
-import mydatasets
+from  . import model #import CNN_Text # originaly import model
+from . import train
+from . import mydatasets
 
 
 parser = argparse.ArgumentParser(description='CNN text classificer')
