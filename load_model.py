@@ -1,6 +1,7 @@
 import argparse
 import torch
 from torch import cuda
+import torchtext.data as data
 from classifier.train import predict, save
 from src.vocabulary import Vocabulary
 from src.style_transfer import StyleTransfer
@@ -14,22 +15,35 @@ parser.add_argument("--evaluation_file_style2", type=str)
 parser.add_argument("--vocabulary", type=str)
 parser.add_argument("--savefile", type=str)
 parser.add_argument("--logdir", type=str, default="")
+parser.add_argument('-predict', type=str, default=None, help='predict the sentence given')
 args = parser.parse_args()
 
 params = loadParams()
 params.savefile = args.savefile
 params.logdir = args.logdir
+
+# Load Vocab
 vocab = Vocabulary()
 vocab.loadVocabulary(args.vocabulary)
 vocab.initializeEmbeddings(params.embedding_size)
 
 model = StyleTransfer(params, vocab)
 model.load_state_dict(torch.load('model.pt'))
+
+# Data
+text_field = data.Field(lower=True)
+label_field = data.Field(sequential=False)
+
+model.eval()
+print("Model Eval Ran Successfuly")
+
+
+sents = ["I am the president of this country.", "I think Obama is a great president", "The state of the union is strong."]
+for sent in sents:
+    label = predict(sent, model, text_field, label_feild, cuda.is_available())
+
+
+
 # model = torch.load('/Users/schen1337/Documents/text_style_transfer/data/models/yelp/experiment_0_models/model-2020-04-01-epoch_9-loss_16.367482.pt')
 #model = torch.load('data/models/yelp/experiment_0_models/model-2020-04-01-epoch_9-loss_16.367482.pt')
 #model = torch.load('model.pt')
-model.eval()
-print("Model Eval worked")
-sents = []
-for sent in sents:
-    predict(sent, model, text_field, label_feild, cuda.is_available())
