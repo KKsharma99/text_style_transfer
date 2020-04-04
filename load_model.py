@@ -24,7 +24,7 @@ vocab.loadVocabulary(args.vocabulary)
 vocab.initializeEmbeddings(params.embedding_size)
 
 model = StyleTransfer(params, vocab)
-model.load_state_dict(torch.load('data/models/yelp/experiment_0_models/model-2020-04-01-epoch_9-loss_16.367482.pt'))
+model.load_state_dict(torch.load('model.pt'))
 # model = torch.load('/Users/schen1337/Documents/text_style_transfer/data/models/yelp/experiment_0_models/model-2020-04-01-epoch_9-loss_16.367482.pt')
 #model = torch.load('data/models/yelp/experiment_0_models/model-2020-04-01-epoch_9-loss_16.367482.pt')
 #model = torch.load('model.pt')
