@@ -1,12 +1,13 @@
 import argparse
+import sys
 import torch
 from torch import cuda
 import torchtext.data as data
 from classifier.train import predict, save
+from classifier.mydatasets import DataSet
 from src.vocabulary import Vocabulary
 from src.style_transfer import StyleTransfer
 from scripts.train_model import loadParams
-from classifier.mydatasets import DataSet
 
 #import classifier.main
 
@@ -20,7 +21,7 @@ parser.add_argument("--savefile", type=str)
 parser.add_argument("--logdir", type=str, default="")
 parser.add_argument('-predict', type=str, default=None, help='predict the sentence given')
 args = parser.parse_args()
-
+print(args)
 params = loadParams()
 params.savefile = args.savefile
 params.logdir = args.logdir
