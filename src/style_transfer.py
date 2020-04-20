@@ -28,6 +28,7 @@ def labelFlipping(ones, flipping):
     s = ones.shape[0]
     probs = ones / s
     nSamples = int(round(s * flipping))
+    if nSamples == 0: nSamples = 1
     indexToFlip = torch.multinomial(probs[:, 0], nSamples)
     ones[indexToFlip] = 0
     return ones
