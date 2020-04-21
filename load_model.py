@@ -40,7 +40,7 @@ text_field = data.Field(lower=True)
 label_field = data.Field(sequential=False)
 
 train_data, dev_data = DataSet.splits(
-        text_field, label_field, root='data/yelp/classifier_train_dev')
+        text_field, label_field, root='data/all/')
 text_field.build_vocab(train_data, dev_data)
 label_field.build_vocab(train_data, dev_data)
 

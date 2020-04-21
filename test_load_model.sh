@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python -m load_model \
+python3 -m load_model \
   --train_file_style1 data/yelp/train/positive.txt \
   --train_file_style2 data/yelp/train/negative.txt \
   --evaluation_file_style1 data/yelp/dev/positive.txt \
