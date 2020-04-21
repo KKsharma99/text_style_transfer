@@ -505,3 +505,8 @@ class StyleTransfer(BaseModel):
             param_norm = p.grad.data.norm(2)
             total_norm += param_norm ** 2
             return total_norm ** (1. / 2)
+
+    def forward(self, x):
+        x = self.encoder(x)
+        x = self.generator(x)
+        return x

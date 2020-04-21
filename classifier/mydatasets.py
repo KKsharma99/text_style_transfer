@@ -135,10 +135,10 @@ class DataSet(TarDataset):
         if examples is None:
             path = self.dirname if path is None else path
             examples = []
-            with open(os.path.join(path, 'yelp.neg'), errors='ignore') as f:
+            with open(os.path.join(path, 'trump_all_lower.txt'), errors='ignore') as f:
                 examples += [
                     data.Example.fromlist([line, 'negative'], fields) for line in f]
-            with open(os.path.join(path, 'yelp.pos'), errors='ignore') as f:
+            with open(os.path.join(path, 'en_all_data_lower.txt'), errors='ignore') as f:
                 examples += [
                     data.Example.fromlist([line, 'positive'], fields) for line in f]
         super(DataSet, self).__init__(examples, fields, **kwargs)
