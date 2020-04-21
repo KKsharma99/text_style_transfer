@@ -3,6 +3,7 @@ import sys
 import torch
 import torch.autograd as autograd
 import torch.nn.functional as F
+from src.beam_search import BeamSearchDecoder
 
 
 def train(train_iter, dev_iter, model, args):
@@ -92,7 +93,11 @@ def predict(text, model, text_field, label_feild, cuda_flag):
     if cuda_flag:
         x = x.cuda()
     print(x)
-    output = model(x)
+    decoder = BeamSearchDecoder(model, model.parameters)
+    
+    output = decoder.rewriteBatch(text,label_feild)
+
+    # output = model(x)
     _, predicted = torch.max(output, 1)
     #return label_feild.vocab.itos[predicted.data[0][0]+1]
     return label_feild.vocab.itos[predicted.data[0]+1]

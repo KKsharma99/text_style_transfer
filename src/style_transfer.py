@@ -506,7 +506,7 @@ class StyleTransfer(BaseModel):
             total_norm += param_norm ** 2
             return total_norm ** (1. / 2)
 
-    def forward(self, x):
-        x = self.encoder(x)
-        x = self.generator(x)
+    def forward(self, x, hidden):
+        x, hidden = self.encoder(x, hidden)
+        x = self.generator(x, hidden)
         return x
