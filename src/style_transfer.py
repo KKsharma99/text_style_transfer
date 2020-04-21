@@ -494,6 +494,13 @@ class StyleTransfer(BaseModel):
 
     def printDebugLoss(self):
         out = {k: float(v) for k, v in self.losses.items()}
+
+        # Creating Log File 
+        log_file = open("../loss_log_by_batch.txt","a")#append mode 
+        log_file.write(json.dumps(out, indent=4)) 
+        log_file.close()
+        ##################
+
         logging.debug('Losses: \n{0}'.format(json.dumps(out, indent=4)))
 
     @staticmethod
@@ -505,8 +512,3 @@ class StyleTransfer(BaseModel):
             param_norm = p.grad.data.norm(2)
             total_norm += param_norm ** 2
             return total_norm ** (1. / 2)
-
-    def forward(self, x, hidden):
-        x, hidden = self.encoder(x, hidden)
-        x = self.generator(x, hidden)
-        return x
