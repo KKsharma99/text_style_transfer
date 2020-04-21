@@ -82,7 +82,7 @@ def eval(data_iter, model, args):
     return accuracy
 
 
-def predict(text, model, text_field, label_feild, cuda_flag):
+def predict(text, model, params, text_field, label_feild, cuda_flag):
     assert isinstance(text, str)
     model.eval()
     # text = text_field.tokenize(text)
@@ -93,7 +93,7 @@ def predict(text, model, text_field, label_feild, cuda_flag):
     if cuda_flag:
         x = x.cuda()
     print(x)
-    decoder = BeamSearchDecoder(model, model.parameters)
+    decoder = BeamSearchDecoder(model, params)
     
     output = decoder.rewriteBatch(text,label_feild)
 

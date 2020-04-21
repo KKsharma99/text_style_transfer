@@ -76,7 +76,7 @@ label_field.build_vocab(train_data, dev_data)
 
 sents = ["I am the president of this country.", "I think Obama is a great president", "The state of the union is strong."]
 for sent in sents:
-    label = predict(sent, model, text_field, label_field, cuda.is_available())
+    label = predict(sent, model, params, text_field, label_field, cuda.is_available())
     print('\n[Text]  {}\n[Label] {}\n'.format(sent, label))
 
 
