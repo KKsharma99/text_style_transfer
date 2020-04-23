@@ -5,6 +5,6 @@ python -m scripts.train_model \
   --train_file_style2 data/yelp/train/negative.txt \
   --evaluation_file_style1 data/yelp/dev/positive.txt \
   --evaluation_file_style2 data/yelp/dev/negative.txt \
-  --vocabulary data/yelp/vocabulary_min_freq_5.pickle \
+  --vocabulary data/yelp/vocab/vocabulary_min_freq_5.pickle \
   --savefile data/models/yelp/model \
   --logdir data/models/yelp/log/
