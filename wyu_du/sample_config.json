@@ -9,8 +9,8 @@
     "random_seed": 1
   },
   "data": {
-    "src": "data/yelp/sentiment.train.1",
-    "tgt": "data/yelp/sentiment.train.0",
+    "src": "data/yelp/sentiment.train.short.1",
+    "tgt": "data/yelp/sentiment.train.short.0",
     "src_dev": "data/yelp/sentiment.dev.0",
     "tgt_dev": "data/yelp/sentiment.dev.1",
     "src_truth": "data/yelp/sentiment.truth.0",
