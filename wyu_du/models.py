@@ -190,7 +190,7 @@ class DeleteRetrieveModel(nn.Module):
         # [batch, max_len, vocab_size]
         probs = self.softmax(decoder_logit)
         print(decoder_logit.size())
-        print(probs.size())
+        #print(probs.size())
         
         return decoder_logit, probs
     
