@@ -80,8 +80,6 @@ def train(config, working_dir):
     num_batches = len(src['content']) // config['data']['batch_size']
 
     for epoch in range(start_epoch, config['training']['epochs']):
-        torch.save(model.state_dict(), working_dir + '/model.%s.ckpt' % epoch)
-        print("Saved Checkpoint for Epoch", epoch)
         if cur_metric > best_metric:
             # rm old checkpoint
             for ckpt_path in glob.glob(working_dir + '/model.*'):
