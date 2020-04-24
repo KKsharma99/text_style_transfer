@@ -328,5 +328,10 @@ def my_decode_dataset(model, src, tgt, config):
             rouge_list.append(rouge_cur)
         except:
             print("Skipped troubling data point", str(j))
+            rouge_list.append(None)
+            initial_inputs.append(None)
+            preds.append(None)
+            ground_truths.append(None)
+            auxs.append(None)
     
     return searcher, rouge_list, initial_inputs, preds, ground_truths, auxs
