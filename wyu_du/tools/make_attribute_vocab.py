@@ -58,16 +58,16 @@ def make_attribute(train_corpus0, train_corpus1, test_corpus0=None, test_corpus1
     
 if __name__=='__main__':
     # Directory of corpus
-    train_corpus0 = './data/yelp/sentiment.train.0'
-    train_corpus1 = './data/yelp/sentiment.train.1'
-    test_corpus0 = './data/yelp/sentiment.dev.0'
-    test_corpus1 = './data/yelp/sentiment.dev.1'
+    train_corpus0 = '../data/yelp/sentiment.train.0'
+    train_corpus1 = '../data/yelp/sentiment.train.1'
+    test_corpus0 = '../data/yelp/sentiment.dev.0'
+    test_corpus1 = '../data/yelp/sentiment.dev.1'
     
     # Number of attributes to be selected
-    top_attr_num = 1000
+    top_attr_num = 20000
     
     # Directory of attribute file
-    attr_file = './data/yelp/dict_attr_top' + str(top_attr_num) + '.20k'
+    attr_file = '../data/yelp/dict_attr_top' + str(top_attr_num) + '.20k'
     
     # Run method
     tok_weights_dict = make_attribute(train_corpus0, train_corpus1, test_corpus0=test_corpus0, test_corpus1=test_corpus1)
