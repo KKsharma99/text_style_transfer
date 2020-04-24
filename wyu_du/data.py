@@ -256,6 +256,7 @@ def get_minibatch(lines, tok2id, index, batch_size, max_len, sort=False, idx=Non
         lines = sample_replace(lines, dist_measurer, sample_rate, index)
 
     lens = [len(line) - 1 for line in lines]
+    
     max_len = max(lens)
 
     unk_id = tok2id['<unk>']
